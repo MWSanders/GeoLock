@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">GeoLock</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Lock Screen</string>
+    <string name="name_app">GeoLock Widget</string>
+    <string name="admin_label">GeoLock</string>
+    <string name="admin_description">Active this to activate GeoLock</string>
+    <string name="no_admin">Go to Settings &gt; Secure &gt; Administrator and active Geolock</string>
+    <string name="title_activity_tuto">GeoLock</string>
+    <string name="to_settings">Go to Security Settings</string>
+    <string name="tuto_text">You need to activate Admin Settings before you use the widget</string>
+
+</resources>

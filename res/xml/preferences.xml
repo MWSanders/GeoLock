@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory 
+		android:title="First Category"
+		android:key="first_category">
+		
+<!-- 		<CheckBoxPreference 
+			android:key="perform_updates"
+			android:summary="Enable or disable data updates"
+			android:title="Enable updates" 
+			android:defaultValue="true"
+		/-->
+		<SwitchPreference android:key="error_dialog" android:title="Show distance information" android:summary="Upon unlock, show dialog to user with distance to nearest authorized locaiton (allows use of Home)" android:defaultValue="true"/> 
+<!-- 		<ListPreference 
+			android:key="updates_interval"
+			android:title="Updates interval"
+			android:summary="Define how often updates will be performed"
+			android:defaultValue="1000" 
+			android:entries="@array/updateInterval"
+			android:entryValues="@array/updateIntervalValues"
+			android:dependency="perform_updates"
+		/> -->
+	</PreferenceCategory>
+
+	<PreferenceCategory
+        android:key="location1"
+        android:summary="Location1"
+        android:title="Location1" >
+		<CheckBoxPreference android:title="Location 1 Enabled" android:key="location_enabled1" android:defaultValue="true"/>
+		<EditTextPreference
+            android:defaultValue="38.89335,-104.801508"
+            android:dialogMessage="Enter Location 1"
+            android:dialogTitle="Location 1"
+            android:key="location_text1"
+            android:summary="Define the first location"
+            android:title="location_text1" 
+            android:dependency="location_enabled1"/>
+        <EditTextPreference
+            android:defaultValue="100"
+            android:dialogMessage="Location 1 Radius"
+            android:dialogTitle="Location 1 Radius"
+            android:key="locaiton_radius1"
+            android:summary="Define the radius of locaiton 1"
+            android:title="Location 1 Radius" 
+            android:dependency="location_enabled1"/>
+        
+    </PreferenceCategory>
+	
+	<PreferenceCategory android:summary="Location2" android:title="Location2" android:key="location2">
+	    <CheckBoxPreference android:title="Location 2 Enabled" android:key="location_enabled2" android:defaultValue="false"/>
+		<EditTextPreference android:summary="Define the second location" 
+		    android:dialogTitle="Location 2" 
+		    android:dialogMessage="Enter Location 2" 
+		    android:key="location_text2" 
+		    android:title="location_text2" 
+		    android:defaultValue="38.909991,-104.826976"
+		    android:dependency="location_enabled2"/>
+		<EditTextPreference
+            android:defaultValue="100"
+            android:dialogMessage="Location 2 Radius"
+            android:dialogTitle="Location 2 Radius"
+            android:key="locaiton_radius2"
+            android:summary="Define the radius of locaiton 2"
+            android:title="Location 2 Radius" 
+            android:dependency="location_enabled2"/>
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:summary="Location3" android:title="Location3" android:key="location3">
+	    <CheckBoxPreference android:title="Location 3 Enabled" android:key="location_enabled3" android:defaultValue="false"/>
+		<EditTextPreference android:summary="Define the thrid location" 
+		    android:dialogTitle="Location 3" 
+		    android:dialogMessage="Enter Location 3" 
+		    android:key="location_text3" 
+		    android:title="location_text3" 
+		    android:defaultValue="38.9560951,-77.4195126"
+		    android:dependency="location_enabled3"/>
+		<EditTextPreference
+            android:defaultValue="100"
+            android:dialogMessage="Location 3 Radius"
+            android:dialogTitle="Location 3 Radius"
+            android:key="locaiton_radius3"
+            android:summary="Define the radius of locaiton 3"
+            android:title="Location 3 Radius" 
+			android:dependency="location_enabled3"/>
+	</PreferenceCategory>
+	
+<!-- 	<PreferenceCategory android:key="locationMethods" android:title="Location Methods" android:summary="Location Methods">
+		<SwitchPreference android:key="gps_On" android:title="GPS"/>
+		<SwitchPreference android:key="wifi_On" android:title="Wifi"/>
+		<SwitchPreference android:key="mobile_On" android:title="Mobile"/>
+	</PreferenceCategory> -->
+	
+	
+</PreferenceScreen>
